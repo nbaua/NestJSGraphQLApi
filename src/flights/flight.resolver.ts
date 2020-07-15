@@ -12,6 +12,12 @@ export class FlightResolver {
     return this.flightService.getFlights();
   }
 
+  
+  @Query(() => FlightEntity)
+  async flight(@Args('id') id:number) {
+    return this.flightService.getFlightById(id);
+  }
+
   @Mutation(() => FlightEntity)
   async createFlight(@Args('input') input: FlightInput) {
     return await this.flightService.createFlight(input);

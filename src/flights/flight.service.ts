@@ -17,6 +17,7 @@ export class FlightService {
   }
 
   async getFlightById(_id: number): Promise<FlightEntity[]> {
+
     return await this.flightsRepository.find({
       select: [
         'flight_code',
@@ -28,6 +29,7 @@ export class FlightService {
       ],
       where: [{ id: _id }],
     });
+
   }
 
   async createFlight(flightInput: FlightInput) {

@@ -19,6 +19,7 @@ input FlightInput {
 
 type Query {
   flights: [Flight!]
+  flight(id: Int): [Flight!]
 }
 
 type Mutation {
