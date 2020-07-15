@@ -32,4 +32,4 @@ __The Angular FrontEnd used in the [AngraTS](https://github.com/nbaua/Angra-Angu
   Nest is [MIT licensed](LICENSE).
 
 ## Quick Tutorial
-[Quick Tutorial](tutorial.MD)
+[Quick Tutorial](./src/tutorial/tutorial.MD)
