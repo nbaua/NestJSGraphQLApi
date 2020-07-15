@@ -1,0 +1,28 @@
+type Flight {
+  id: Int
+  flight_code: String!
+  origin: String!
+  destination: String!
+  air_time: String!
+  distance: Int
+  airport: String!
+}
+
+input FlightInput {
+  flight_code: String!
+  origin: String!
+  destination: String!
+  air_time: String!
+  distance: Int
+  airport: String!
+}
+
+type Query {
+  flights: [Flight!]
+}
+
+type Mutation {
+  createFlight(input: FlightInput!): Flight
+  updateFlight(id: Int, input: FlightInput!): Flight
+  deleteFlight(id: Int): Flight
+}
